@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding-bottom: 50px; /* Adjusted for the fixed navbar at the bottom */
+}
+
+.jumbotron {
+    background-color: #007bff;
+    color: #fff;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.schedule-box {
+    border: 1px solid #ddd;
+    max-height: 300px; /* Set the maximum height for the scroll feature */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.matrix-table th, .matrix-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.matrix-table th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.signin-login {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+}

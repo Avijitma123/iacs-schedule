@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Page</title>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Login</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="loginType">Select Login Type:</label>
+                        <select class="form-control" id="loginType" onchange="toggleLoginOption()">
+                            <option value="student">Student</option>
+                            <option value="professor">Professor</option>
+                        </select>
+                    </div>
+
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+    function toggleLoginOption() {
+        var loginType = document.getElementById('loginType').value;
+        var loginForm = document.getElementById('loginForm');
+        
+        if (loginType === 'student') {
+            loginForm.action = 'student-login.php';  // Add the actual student login action
+        } else if (loginType === 'professor') {
+            loginForm.action = 'professor-login.php';  // Add the actual professor login action
+        }
+    }
+</script>
+
+</body>
+</html>
